@@ -4,6 +4,7 @@ from MazeSolverWithBFS import MazeSolverWithBFS
 from MazeSolverWithDFS import MazeSolverWithDFS
 from MazeSolverWithUniformCostSearch import MazeSolverWithUniformCost
 
+
 def menu():
     print("Welcome to the Maze Solver!")
     print("Lets generate a random NxN maze")
@@ -32,22 +33,22 @@ def menu():
 
     if option == "1":
         print("You selected A*.")
-        mazeSolver = MazeSolverWithAStarSearch(maze,(X1,Y1),(X2,Y2))
+        mazeSolver = MazeSolverWithAStarSearch(maze, (X1, Y1), (X2, Y2))
         mazeSolver.astarSearch()
 
     elif option == "2":
         print("You selected BFS.")
-        mazeSolver = MazeSolverWithBFS(maze,(X1,Y1),(X2,Y2))
+        mazeSolver = MazeSolverWithBFS(maze, (X1, Y1), (X2, Y2))
         mazeSolver.breathFirstSearchAlgorithm()
 
     elif option == "3":
         print("You selected DFS.")
-        mazeSolver = MazeSolverWithDFS(maze,(X1,Y1),(X2,Y2))
+        mazeSolver = MazeSolverWithDFS(maze, (X1, Y1), (X2, Y2))
         mazeSolver.depthFirstSearchAlgorithm()
 
     elif option == "4":
         print("You selected Uniform Cost Search")
-        mazeSolver = MazeSolverWithUniformCost(maze,(X1,Y1),(X2,Y2))
+        mazeSolver = MazeSolverWithUniformCost(maze, (X1, Y1), (X2, Y2))
         mazeSolver.uniformCost()
 
     elif option == "5":
@@ -55,7 +56,7 @@ def menu():
     else:
         print("Invalid option. Please try again.")
         menu()
-    
+
 
 # Call the menu function
 menu()

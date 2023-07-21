@@ -4,8 +4,8 @@ from PlotMaze import plot_maze_with_path
 
 from Tile import TileWithoutHeuristic
 
-class MazeSolverWithUniformCost:
 
+class MazeSolverWithUniformCost:
     startingPoint = None
     goalPoint = None
     frontier = None
@@ -23,7 +23,6 @@ class MazeSolverWithUniformCost:
         self.maze = maze
         self.startingPoint = startPoint
         self.goalPoint = endPoint
-
 
     def __getElementFromPairs(self, point):
         """
@@ -140,7 +139,6 @@ class MazeSolverWithUniformCost:
             return
 
         self.frontier.enqueue(TileWithoutHeuristic(self.startingPoint, [], 0))
-
 
         while self.frontier.isEmpty() != True:
             tile = self.frontier.dequeue()

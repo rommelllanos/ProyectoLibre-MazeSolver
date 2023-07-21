@@ -2,6 +2,8 @@ from QueueImpl import Queue
 # import Queue from QueueImpl
 from Tile import TileWithoutHeuristic
 from PlotMaze import plot_maze_with_path
+
+
 # import Tile class which has no heuristic information from Tile
 
 class MazeSolverWithBFS:
@@ -106,7 +108,6 @@ class MazeSolverWithBFS:
                         adjacentPointPairs.append(((x, y - 1)))
                     return adjacentPointPairs
 
-
     def breathFirstSearchAlgorithm(self):
         """
         BFS algorithm:
@@ -157,7 +158,6 @@ class MazeSolverWithBFS:
                                 return
                             else:
                                 self.frontier.enqueue(eachTile)
-
 
     def __printThePath(self, tile):
         """

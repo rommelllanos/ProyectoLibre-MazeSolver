@@ -1,5 +1,7 @@
 import random
 import sys
+
+
 class TileWithoutHeuristic:
     coordinate = None
     cost = None
@@ -13,8 +15,8 @@ class TileWithoutHeuristic:
         self.cost = cost
 
     def __str__(self):
-        return "{Coordinate: " + str(self.coordinate) + " path to tile: " + str(self.pathToTile) + " cost is " + str(self.cost) +"}"
-
+        return "{Coordinate: " + str(self.coordinate) + " path to tile: " + str(self.pathToTile) + " cost is " + str(
+            self.cost) + "}"
 
 
 class TileWithHeuristic:
@@ -23,6 +25,7 @@ class TileWithHeuristic:
     pathToTile = None
     heuristic = None
     heuristicFunction = None
+
     def __init__(self, point, pathToTile, cost, admissibleFlag):
         self.coordinate = point
         self.pathToTile = list()
@@ -36,5 +39,5 @@ class TileWithHeuristic:
             self.heuristic = random.randint(sys.maxsize, sys.maxsize + 10000)
 
     def __str__(self):
-        return "{Coordinate: " + str(self.coordinate) + " path to tile: " + str(self.pathToTile) + " cost is " + str(self.cost) + " heuristic is " + str(self.heuristic) + "}"
-
+        return "{Coordinate: " + str(self.coordinate) + " path to tile: " + str(self.pathToTile) + " cost is " + str(
+            self.cost) + " heuristic is " + str(self.heuristic) + "}"

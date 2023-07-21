@@ -19,10 +19,7 @@ class Stack:
 
         return stack_str
 
-
-
     def isStackContainsElement(self, tile):
         if tile in self.items:
             return True
         return False
-

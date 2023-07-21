@@ -2,6 +2,7 @@ from PriorityQueueImpl import PriorityQueueImpl
 from Tile import TileWithHeuristic
 from PlotMaze import plot_maze_with_path
 
+
 class MazeSolverWithAStarSearch:
     startingPoint = None
     goalPoint = None
@@ -153,7 +154,8 @@ class MazeSolverWithAStarSearch:
             adjacentList = self.__findAdjacentsToThisPoint(tileCoordinate)
             for eachPoint in adjacentList:
                 if not self.__isTileWall(eachPoint):
-                    eachTile = TileWithHeuristic(eachPoint, tile.pathToTile, self.__getElementFromPairs(eachPoint), self.isAllTileAdmissible)
+                    eachTile = TileWithHeuristic(eachPoint, tile.pathToTile, self.__getElementFromPairs(eachPoint),
+                                                 self.isAllTileAdmissible)
                     if self.__isTileGoalState(eachTile.coordinate):
                         eachTile.heuristic = 0
                     if not self.__isTileInExplored(eachTile):

@@ -2,6 +2,8 @@ from StackImpl import Stack
 # import Stack from StackImpl
 from Tile import TileWithoutHeuristic
 from PlotMaze import plot_maze_with_path
+
+
 # import Tile class which has no heuristic information from Tile
 
 class MazeSolverWithDFS:
@@ -9,7 +11,6 @@ class MazeSolverWithDFS:
     goalPoint = None
     stack = None
     explored = None
-
 
     def __init__(self, maze, startPoint, endPoint):
         """
@@ -24,7 +25,6 @@ class MazeSolverWithDFS:
         self.explored = set()
         self.startingPoint = startPoint
         self.goalPoint = endPoint
-
 
     def __getElementFromPairs(self, point):
         """
@@ -76,7 +76,6 @@ class MazeSolverWithDFS:
                  false if not
         """
         return self.stack.isStackContainsElement(tile)
-
 
     def __findAdjacentsToThisPoint(self, point):
         """
