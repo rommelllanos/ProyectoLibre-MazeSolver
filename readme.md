@@ -12,7 +12,6 @@ Este proyecto es una implementación de varios algoritmos de búsqueda (Búsqued
 Para correr el proyecto, sigue estos pasos:
 
 1. Asegúrate de tener Python instalado en tu máquina.
-2. Instala las dependencias del proyecto. Puedes hacer esto ejecutando `pip install -r requirements.txt` en tu terminal.
 3. Corre el archivo `MazeSolver.py` utilizando Python. Puedes hacer esto ejecutando `python MazeSolver.py` en tu terminal.
 
 ## Detalles de la Implementación
